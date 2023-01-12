@@ -25,10 +25,34 @@ body {
     justify-content: space-between;
     gap: 20px;
     list-style: none;
-    
+    font-size: 18px;
+    color: #E5E7EB;
 }
 
 a {
     text-decoration: none;
+}
+
+/* HEADER */
+.header {
+    background-color: #1F2937;
+
+}
+
+.hero-main {
+    font-size: 48px;
+    font-weight: bolder;
     color: #F9FAF8;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.hero-image {
+    width: 400px;
+    height: 200px;
+    background-color: darkslategray;
+    color: #E5E7EB;
 }
