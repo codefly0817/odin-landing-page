@@ -41,6 +41,10 @@ body {
     border: 2px solid goldenrod;
 }
 
+.logo-container {
+    min-width: 300px;
+}
+
 .logo img {
     transform: translate(0px, 25px);
     height: 150px;
@@ -49,10 +53,18 @@ body {
 
 .nav-links ul {
     display: flex;
-    justify-content: space-between;
-    gap: 35px;
+    min-width: 300px;
+    justify-content: space-evenly;
+    gap: 70px;
     list-style: none;
     font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a:hover {
+    color: goldenrod;
+    font-weight: 700;
 }
 
 a {
@@ -67,6 +79,7 @@ a {
     align-items: center;
     height: 100vh;
     background: url("https://wallpapercave.com/wp/wp8414374.jpg");
+
 }
 
 .hero {
@@ -92,23 +105,23 @@ a {
 
 .hero-sign {
     width: 220px;
-    height: 30px;
+    height: 40px;
     font-size: 16px;
     font-weight: 700;
     appearance: none;
     border: none;
     cursor: pointer;
     color: #E5E7EB;
-    background: none;
-    border: 1px solid #E5E7EB;
-    border-radius: 2px;
+    /* background: none;
+    border: 1px solid #E5E7EB; */
+    background-color: rgb(245, 137, 13);
+    border-radius: 3px;
     text-shadow: 1px 1px 1px black;
 }
 
-.photo {
-    transform: translate(280px, 400px);
-    font-size: 12px;
-    color: rgb(92, 92, 92);
+.hero-sign:hover {
+    background-color:#1F2937;
+    transition: 200ms;
 }
 
 /* INFO SECTION */
@@ -135,9 +148,17 @@ a {
 }
 
 .img-sample {
-    background-color: silver;
     width: 400px;
     height: 300px;
+    box-shadow: 1px 1px 1px #0E1826;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.img-sample:hover {
+    bottom: 3px;
+    position: relative;
+    transition: 150ms;
 }
 
 figcaption {
@@ -163,6 +184,7 @@ figcaption {
     width: 50vw;
     border-radius: 10px;
     box-shadow: 1px 2px 1px rgb(36, 34, 34);
+    text-shadow: 1px 2px 1px rgb(36, 34, 34);
 }
 
 .quotes {
@@ -173,6 +195,7 @@ figcaption {
 .author {
     text-align: end;
     font-size: 25px;
+    margin-top: 50px;
 }
 
 .sign-up {
@@ -180,8 +203,8 @@ figcaption {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    background-size: 100%;
+    background: no-repeat center url("https://images.unsplash.com/photo-1581822261290-991b38693d1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
 }
 
 .sign-container {
@@ -224,4 +247,26 @@ figcaption {
     align-items: center;
     background-color: #1F2937;
     color:  #E5E7EB;
+    border-top: 1px solid #0E1826;
+}
+
+@media (max-width: 600px) {
+    .nav {
+        flex-flow: column;
+        height: auto;
+    }
+
+    .nav-links {
+        padding: 10px 0;
+    }
+
+    .header {
+        padding-bottom: 100px;
+    }
+    
+    .info, .text-section {
+        height: auto;
+        padding: 150px 0;
+    }
+
 }
